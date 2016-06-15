@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %> 
 <html lang="en">
 <head>
   <title>Bootstrap Example</title>
@@ -24,11 +25,11 @@
       
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Contact</a></li>
+      <li class="active"><a href="home">Home</a></li>
+      <li><a href="E:\yogi\yogipro\mavenapp\src\main\webapp\WEB-INF\view\searchOne.jsp">View</a></li>
       <li><a href="#">About us</a></li>
-      <li><a href="Login.jsp">Login</a></li>
-      <li><a href="reg.jsp">Register</a></li>
+      <li><a href="login">Login</a></li>
+      <li><a href="reg">Register</a></li>
     </ul>
   </div>
 </nav>
@@ -57,23 +58,24 @@
     
     
       <div class="item active">
-        <img src="images/one.jpg" alt="Chania" width="1000" height="1000">
+         <img src="<c:url value="/resources/images/one.jpg"/>" alt="Chania" width="600" height="500">
       </div>
 
       <div class="item">
-        <img src="images/two.jpg" alt="Chania" width="600" height="500">
+        <img src="<c:url value="/resources/images/two.jpg"/>" alt="Chania" width="600" height="500">
       </div>
     
       <div class="item">
-        <img src="images/three.jpg" alt="Flower" width="600" height="500">
+        <img src="<c:url value="/resources/images/three.jpg"/>" alt="Chania" width="600" height="500"> 
+      </div>
+      
+      
+       <div class="item">
+         <img src="<c:url value="/resources/images/four.jpg"/>" alt="Chania" width="600" height="500">
       </div>
       
        <div class="item">
-        <img src="images/four.jpg" alt="Chania" width="600" height="500">
-      </div>
-      
-       <div class="item">
-        <img src="images/five.jpg" alt="Chania" width="600" height="500">
+         <img src="<c:url value="/resources/images/five.jpg"/>" alt="Chania" width="600" height="500">
       </div>      
 
       </div>
@@ -94,21 +96,19 @@
             
   <div class="row">
     <div class="col-sm-4">
-      <a href="images/one.jpg" class="thumbnail">
+      <a href="enter">
           
-        <img src="images/one.jpg" alt="Pulpit Rock" style="width:300px;height:150px">
-      </a>
+         <img src="<c:url value="/resources/images/one.jpg"/>" alt="Pulpit Rock" style="width:300px;height:150px">
+         <a href="search?data=chair" >sofa</a>
     </div>
     <div class="col-sm-4">
-      <a href="images/two.jpg" class="thumbnail">
-       
-        <img src="images/two.jpg" alt="Moustiers Sainte Marie" style="width:300px;height:150px">
-      </a>
+           
+         <img src="<c:url value="/resources/images/two.jpg"/>" alt="Moustiers Sainte Marie" style="width:300px;height:150px">
+         <a href="search?data=sofa" >sofa</a>
     </div>
     <div class="col-sm-4">
-      <a href="images/five.jpg" class="thumbnail">
-            
-        <img src="images/five.jpg" alt="Cinque Terre" style="width:300px;height:150px">
+      <a href="enter pro?data=table">
+           <img src="<c:url value="/resources/images/three.jpg"/>" alt="Cinque Terre" style="width:300px;height:150px">
       </a>
     </div>
   </div>
